@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,8 +6,12 @@ body {
     line-height: 1.6;
     color: white;
     background-color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Header */
 header {
     background: #333;
     color: white;
@@ -25,7 +30,9 @@ header p {
     font-weight: 300;
 }
 
+/* Main Content */
 main {
+    flex: 1; /* Allows main content to stretch and push the footer down */
     padding: 2rem;
     text-align: center;
 }
@@ -46,12 +53,29 @@ main section p {
     margin: 0 auto;
 }
 
+/* Blockquote Styling */
+blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 2rem auto;
+    color: white;
+    max-width: 600px;
+    padding: 1rem;
+    border-left: 4px solid white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+/* Footer */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 1rem 0;
     font-size: 0.9rem;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
@@ -63,6 +87,5 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
 
 
